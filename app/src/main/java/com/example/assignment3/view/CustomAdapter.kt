@@ -40,7 +40,6 @@ class CustomAdapter(val listener: OpenMovieDetail): RecyclerView.Adapter<CustomA
     }
 
 
-
     fun CustomViewHolder.onBindData(data: MovieItem, listener: OpenMovieDetail){
         this.moviePopularity.text = data.popularity.toString()
         this.movieTitle.text = data.original_title

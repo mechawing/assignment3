@@ -35,8 +35,7 @@ class MainActivity : AppCompatActivity(), OpenMovieDetail {
         viewModel.getPopularItems().observe(
             this,
             Observer {
-                val fragmentMovieList = PopularMovieList.newInstance(it, this) ?: throw IllegalArgumentException("null")
-                initPopularList(fragmentMovieList)
+                initPopularList(PopularMovieList.newInstance(it, this))
             })
         viewModel.getMovieItem().observe(
             this,
